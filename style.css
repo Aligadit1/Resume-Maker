@@ -1,0 +1,30 @@
+#main-heading{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+    align-items: center;
+    background: #272343;
+    height: 10vh
+}
+#user-information{
+    font-size: 5vh;
+    color: #272343;
+}
+.information{
+    color: #3e588f;
+    font-size: 4vh;
+    text-decoration: underline;
+}
+.input :hover{
+    transform: scale(1.1);
+    cursor :crosshair
+}
+#more-information{
+    color: #3e588f;
+}
+#more-information :hover {
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
