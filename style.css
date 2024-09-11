@@ -15,16 +15,91 @@
     font-size: 4vh;
     text-decoration: underline;
 }
+.input-skill{
+    font-size: 4vmin;
+    margin-top: -2vh;
+    
+    
+}
 .input :hover{
     transform: scale(1.1);
     cursor :crosshair
 }
-#more-information{
-    color: #3e588f;
-}
-#more-information :hover {
+#options :hover{
     cursor: pointer;
 }
 .hide{
     display: none;
+}
+#Generate-button{
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    color: darkslategrey;
+    height: 5vmin;
+    border-radius: 20px;
+    box-shadow: #272343;
+    border-color: darkslategrey;
+    margin-top: 5vmin;
+}
+#more-information{
+    color: #3e588f;
+    height: 5vmin;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+.output{
+    background-color: darkgray;
+    font-size: 3vmin;
+    color: #fff;;
+     
+}
+.information1{
+    display: block;
+    color: #3e588f;
+    font-size: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#image{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#outputHide{
+    display: none;
+}
+.main-resume{
+    margin-top: 100vmin;
+    height: 100px;
+}
+#resume-Heading{
+    color: aqua;
+    font-size: larger;
+    font-style: italic;
+    text-decoration: underline;
+    background-color: #272343;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#changes-btn{
+    color: #3e588f;
+    height: 5vmin;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.output1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }

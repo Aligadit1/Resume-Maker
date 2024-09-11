@@ -8,49 +8,73 @@
     
 </head>
 <body>
-    <form>
+    <form id="resume-form">
     <div id="form-body">
     <div id="main-heading"><b><h1>Resume builder</h1></b></div>
     <div id="user-information"><h3>Kindly provide your information</h3></div>
-    <div class="information"><h4>Your name</h4></div>
-    <div class="input"><input type="text" placeholder="Enter your name"></div>
+    <div class="information"><h4>Your name:</h4></div>
+    <div class="input" ><input type="text" id="name" placeholder="Enter your name"></div>
     <hr>
-    <div class="information"><h4>Your contact number</h4></div>
-    <div class="input"><input type="number" placeholder="Enter your Contact number"></div>
+    <div class="information"><h4>Your contact number:</h4></div>
+    <div class="input" ><input type="number" id="number" placeholder="Enter your Contact number" required></div>
     <hr>
-    <div class="information"><h4>Your Email</h4></div>
-    <div class="input"><input type="email" placeholder="Enter your Email"></div>
+    <div class="information"><h4>Your Email:</h4></div>
+    <div class="input" ><input type="email" id="email" placeholder="Enter your Email"required ></div>
     <hr>
-    <div class="information"><h4>Tell us about your education</h4></div>
-    <div class="input"><input type="text" placeholder="Enter about your education background"></div>
+    <div class="information"><h4>Tell us about your education:</h4></div>
+    <div class="input" ><input type="text" id="education" placeholder="Enter about your education background" required></div>
     <hr>
-    <div class="information"><h4>Your picture</h4></div>
-    <div class="input" ><input type="file" accept="image/*" placeholder="Insert your picture"></div>
+    <div class="information"><h4>Your picture:</h4></div>
+    <label for="input-image">
+    <div class="input" ><input type="file" accept="image/jpeg, image/png, image/jpg" id="input-image"></div></label>
     <hr>
-    <div class="information"><h4>Tell us about your experience</h4></div>
-    <div class="input"><input type="text" placeholder="Enter about your experiences"></div>
+    <div class="information"><h4>Tell us about your experience:</h4></div>
+    <div class="input" ><input type="text" id="experience" placeholder="Enter about your experiences" required></div>
     <hr>
-    <div class="information" ><h4>Tell us about your skills</h4></div>
+    <div class="information" ><h4>Tell us about your skills:</h4></div>
    <form>
-    <label for="1stSkill">
-    <div class="input hide"><input type="checkbox" value="HTML" name="options" id="options">Html
-    </label>
-    <label for="2ndSkill">
-    <input type="checkbox" value="CSS" name="options" id="options">CSS
-    </label>
-    <label for="3rdSkill">
-    <input type="checkbox" value="TS/JS" name="options" id="options">TS/JS
-    </label>
-    <label for="4thSkill">
-    <input type="checkbox" value="NextJS" name="options" id="options">NextJS
+    <ul>
+    <div class="hide input-skill" id="options">
+    <label for="option1" >
+    <li><input type="checkbox" value="HTML" name="HTML" id="option1">Html
+    </label></li>
+    <li><label for="option2">
+    <input type="checkbox" value="CSS" name="CSS" id="option2">CSS
+    </label></li>
+    <label for="option3">
+    <li><input type="checkbox" value="TS/JS" name="TS/JS" id="option3">TS/JS
+    </label></li>
+    <label for="option4">
+    <li><input type="checkbox" value="NextJS" name="NextJS" id="option4">NextJS
+    </li>
+    <hr>
 </div>
     </label>
+</ul>
 </form>
-    <hr>
     </div>
     <br>
-    <div id="more-information"><button">Click here to select your skills</button></div>
+    <div ><button id="more-information">Click here to select your skills</button></div>
+    <button id="Generate-button">Generate your Resume</button>
 </form>
+ <div id="resume">
+    <div class="main-resume" id="outputHide">
+        <div id="resume-Heading"><h1><b>Your Resume </b></h1></div>
+        <img id="image" src="usero,ahe.png" alt="Profile picture">
+    <h2 class="information1">Name:<output class="output" id="user-name"></output></h2>
+    <h2 class="information1">Education:<output class="output" id="user-education"></output></h2>
+    <h2 class="information1">Experience: <output class="output" id="user-experience"></output></h2>
+    <h2 class="information1">ContactNumber:<output class="output" id="user-number"></output></h2>
+    <h2 class="information1">Email:<output class="output" id="user-email"></output></h2>
+    <h2 class="information1">Skills: <ul><li id="user-skill1"><output class="output" ></output></li>
+        <li><output class="output" id="user-skill2"></output></li>
+        <li><output class="output" id="user-skill3"></output></li>
+        <li><output class="output" id="user-skill4"></output></li>
+    </h2>
+    </ul>
+    <button id="changes-btn">Click Here to Rewrite</button>
+</div>
+ </div>
     <script src="script.js" ></script>
 </body>
 </html>
