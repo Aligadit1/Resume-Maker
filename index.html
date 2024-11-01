@@ -5,76 +5,280 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <form id="resume-form">
     <div id="form-body">
     <div id="main-heading"><b><h1>Resume builder</h1></b></div>
     <div id="user-information"><h3>Kindly provide your information</h3></div>
-    <div class="information"><h4>Your name:</h4></div>
-    <div class="input" ><input type="text" id="name" placeholder="Enter your name"></div>
-    <hr>
-    <div class="information"><h4>Your contact number:</h4></div>
-    <div class="input" ><input type="number" id="number" placeholder="Enter your Contact number" required></div>
-    <hr>
-    <div class="information"><h4>Your Email:</h4></div>
-    <div class="input" ><input type="email" id="email" placeholder="Enter your Email"required ></div>
-    <hr>
-    <div class="information"><h4>Tell us about your education:</h4></div>
-    <div class="input" ><input type="text" id="education" placeholder="Enter about your education background" required></div>
-    <hr>
     <div class="information"><h4>Your picture:</h4></div>
     <label for="input-image">
     <div class="input" ><input type="file" accept="image/jpeg, image/png, image/jpg" id="input-image"></div></label>
     <hr>
-    <div class="information"><h4>Tell us about your experience:</h4></div>
-    <div class="input" ><input type="text" id="experience" placeholder="Enter about your experiences" required></div>
+    <div class="information"><h4>Your name:</h4></div>
+    <div class="input" ><input type="text" id="in-name" placeholder="Enter your name"></div>
+    <div class="example"><p>Example:Ali Gadit</p></div>
     <hr>
-    <div class="information" ><h4>Tell us about your skills:</h4></div>
+    <div class="information"><h4>Your Passion</h4></div>
+    <div class="input"><input type="text" id="in-passion" placeholder="What is your passion"></div>
+    <div class="example"><p>Example:Web Developer</p></div>
+    <hr>
+    <div class="information"><h4>Your contact number:</h4></div>
+    <div class="input" ><input type="text" id="in-number" placeholder="Enter your Contact number" required></div>
+    <div class="example"><p>Example:+92 3248274201 Start with your country code not with 0</p></div>
+    <hr>
+    <div class="information"><h4>Your Email:</h4></div>
+    <div class="input" ><input type="email" id="in-email" placeholder="Enter your Email"required ></div>
+    <div class="example"><p>Example:aligadit9192@gmail.com</p></div>
+    <hr>
+    <div class="information" ><h4>Select your skills:</h4></div>
    <form>
     <ul>
     <div class="hide input-skill" id="options">
-    <label for="option1" >
-    <li><input type="checkbox" value="HTML" name="HTML" id="option1">Html
+    <label for="in-skill1" >
+    <li><input type="checkbox" value="HTML" name="HTML" id="in-skill1">Html
     </label></li>
-    <li><label for="option2">
-    <input type="checkbox" value="CSS" name="CSS" id="option2">CSS
+    <li><label for="in-skill2">
+    <input type="checkbox" value="CSS" name="CSS" id="in-skill2">CSS
     </label></li>
-    <label for="option3">
-    <li><input type="checkbox" value="TS/JS" name="TS/JS" id="option3">TS/JS
+    <label for="in-skill3">
+    <li><input type="checkbox" value="TS/JS" name="TS/JS" id="in-skill3">TS/JS
     </label></li>
-    <label for="option4">
-    <li><input type="checkbox" value="NextJS" name="NextJS" id="option4">NextJS
+    <label for="in-skill4">
+    <li><input type="checkbox" value="NextJS" name="NextJS" id="in-skill4">NextJS
     </li>
-    <hr>
 </div>
     </label>
 </ul>
 </form>
-    </div>
+</div>
     <br>
     <div ><button id="more-information">Click here to select your skills</button></div>
-    <button id="Generate-button">Generate your Resume</button>
-</form>
- <div id="resume">
-    <div class="main-resume" id="outputHide">
-        <div id="resume-Heading"><h1><b>Your Resume </b></h1></div>
-        <img id="image" src="usero,ahe.png" alt="Profile picture">
-    <h2 class="information1">Name:<output class="output" id="user-name"></output></h2>
-    <h2 class="information1">Education:<output class="output" id="user-education"></output></h2>
-    <h2 class="information1">Experience: <output class="output" id="user-experience"></output></h2>
-    <h2 class="information1">ContactNumber:<output class="output" id="user-number"></output></h2>
-    <h2 class="information1">Email:<output class="output" id="user-email"></output></h2>
-    <h2 class="information1">Skills: <ul><li ><output class="output" id="user-skill1" ></output></li>
-        <li><output class="output" id="user-skill2"></output></li>
-        <li><output class="output" id="user-skill3"></output></li>
-        <li><output class="output" id="user-skill4"></output></li>
-    </h2>
+    <hr>
+    <div class="information"><h4>Select Your Languages</h4></div>
+    <form id="langForm" class="hide">
+        <ul>
+        <div class="input-skill" id="options">
+        <label for="in-language1" >
+        <li><input type="checkbox" value="English" name="English" id="in-language1" class="allLanguages1to7 font-lang">English
+        </label></li>
+        <div class="hide font-lang-prof" id="lang1Profficiency" >
+                
+            <input type="radio" value="Elemantary profficiency" name="1langProf" id="1langProf1">
+            <label for="1langProf1" >Elemantary profficiency</label> <br>
+            
+                <input type="radio" value="Limited working profficiency" name="1langProf" id="1langProf2">
+                    <label for="1langProf2" > Limited working profficiency </label><br>
+               
+                    <input type="radio" value="Professional working profficiency" name="1langProf" id="1langProf3">
+                        <label for="1langProf3" >Professional working profficiency </label>
+                        <br>
+                        <input type="radio" value="Full professional profficiency" name="1langProf" id="1langProf4">
+                            <label for="1langProf4" >Full professional profficiency</label>
+                            <br>
+                            <input type="radio" value="Native or bilingual profficiency" name="1langProf" id="1langProf5">
+                            <label for="1langProf5" >Native or bilingual profficiency</label>
+                </div>
+        <li><label for="in-language2">
+        <input type="checkbox" value="Urdu" name="Urdu" id="in-language2" class="allLanguages1to7 font-lang">Urdu
+        </label></li>
+        <div class="hide font-lang-prof" id="lang2Profficiency">
+            <input type="radio" value="Elemantary profficiency" name="2langProf" id="2langProf1">
+            <label for="2langProf1" >Elemantary profficiency</label> <br>
+            
+                <input type="radio" value="Limited working profficiency" name="2langProf" id="2langProf2">
+                    <label for="2langProf2" > Limited working profficiency </label><br>
+               
+                    <input type="radio" value="Professional working profficiency" name="2langProf" id="2langProf3">
+                        <label for="2langProf3" >Professional working profficiency </label>
+                        <br>
+                        <input type="radio" value="Full professional profficiency" name="2langProf" id="2langProf4">
+                            <label for="2langProf4" >Full professional profficiency</label>
+                            <br>
+                            <input type="radio" value="Native or bilingual profficiency" name="2langProf" id="2langProf5">
+                            <label for="2langProf5" >Native or bilingual profficiency</label>
+                </div>
+                <li>
+        <label for="in-language3">
+        <input type="checkbox" value="French" name="French" id="in-language3" class="allLanguages1to7 font-lang">French
+        </label></li>
+        <div class="hide font-lang-prof" id="lang3Profficiency">
+                
+            <input type="radio" value="Elemantary profficiency" name="3langProf" id="3langProf1">
+            <label for="3langProf1" >Elemantary profficiency</label> <br>
+            
+                <input type="radio" value="Limited working profficiency" name="3langProf" id="3langProf2">
+                    <label for="3langProf2" > Limited working profficiency </label><br>
+               
+                    <input type="radio" value="Professional working profficiency" name="3langProf" id="3langProf3">
+                        <label for="3langProf3" >Professional working profficiency </label>
+                        <br>
+                        <input type="radio" value="Full professional profficiency" name="3langProf" id="3langProf4">
+                            <label for="3langProf4" >Full professional profficiency</label>
+                            <br>
+                            <input type="radio" value="Native or bilingual profficiency" name="3langProf" id="3langProf5">
+                            <label for="3langProf5" >Native or bilingual profficiency</label>
+                </div>
+                <li><label for="in-language4">
+        <input type="checkbox" value="Spanish" name="Spanish" id="in-language4" class="allLanguages1to7 font-lang">Spanish
+        </label>
+        </li>
+        <div class="hide font-lang-prof" id="lang4Profficiency">
+                
+            <input type="radio" value="Elemantary profficiency" name="4langProf" id="4langProf1">
+            <label for="4langProf1" >Elemantary profficiency</label> <br>
+            
+                <input type="radio" value="Limited working profficiency" name="4langProf" id="4langProf2">
+                    <label for="4langProf2" > Limited working profficiency </label><br>
+               
+                    <input type="radio" value="Professional working profficiency" name="4langProf" id="4langProf3">
+                        <label for="4langProf3" >Professional working profficiency </label>
+                        <br>
+                        <input type="radio" value="Full professional profficiency" name="4langProf" id="4langProf4">
+                            <label for="4langProf4" >Full professional profficiency</label>
+                            <br>
+                            <input type="radio" value="Native or bilingual profficiency" name="4langProf" id="4langProf5">
+                            <label for="4langProf5" >Native or bilingual profficiency</label>
+                </div>
+        <li><label for="in-language5">
+            <input type="checkbox" value="Arabic" name="Arabic" id="in-language5" class="allLanguages1to7 font-lang">Arabic
+            </label>
+            </li>
+            <div class="hide font-lang-prof" id="lang5Profficiency">
+                
+                    <input type="radio" value="Elemantary profficiency" name="5langProf" id="5langProf1">
+                    <label for="5langProf1" >Elemantary profficiency</label> <br>
+                    
+                        <input type="radio" value="Limited working profficiency" name="5langProf" id="5langProf2">
+                            <label for="5langProf2" > Limited working profficiency </label><br>
+                       
+                            <input type="radio" value="Professional working profficiency" name="5langProf" id="5langProf3">
+                                <label for="5langProf3" >Professional working profficiency </label>
+                                <br>
+                                <input type="radio" value="Full professional profficiency" name="5langProf" id="5langProf4">
+                                    <label for="5langProf4" >Full professional profficiency</label>
+                                    <br>
+                                    <input type="radio" value="Native or bilingual profficiency" name="5langProf" id="5langProf5">
+                                    <label for="5langProf5" >Native or bilingual profficiency</label>
+                        </div>
+                        <li> <label for="in-language6">
+                <input type="checkbox" value="Russian" name="Russian" id="in-language6" class="allLanguages1to7 font-lang">Russian
+                        </label>
+                </li>
+                <div class="hide font-lang-prof" id="lang6Profficiency">
+                
+                    <input type="radio" value="Elemantary profficiency" name="6langProf" id="6langProf1">
+                    <label for="6langProf1" >Elemantary profficiency</label> <br>
+                    
+                        <input type="radio" value="Limited working profficiency" name="6langProf" id="6langProf2">
+                            <label for="6langProf2" > Limited working profficiency </label><br>
+                       
+                            <input type="radio" value="Professional working profficiency" name="6langProf" id="6langProf3">
+                                <label for="6langProf3" >Professional working profficiency </label>
+                                <br>
+                                <input type="radio" value="Full professional profficiency" name="6langProf" id="6langProf4">
+                                    <label for="6langProf4" >Full professional profficiency</label>
+                                    <br>
+                                    <input type="radio" value="Native or bilingual profficiency" name="6langProf" id="6langProf5">
+                                    <label for="6langProf5" >Native or bilingual profficiency</label>
+                        </div>
+                        <li><label for="in-language7">
+                    <input type="checkbox" value="German" name="German" id="in-language7" class="allLanguages1to7 font-lang">German
+                    </label>
+                    </li>
+                    <div class="hide font-lang-prof" id="lang7Profficiency">
+                
+                        <input type="radio" value="Elemantary profficiency" name="7langProf" id="7langProf1">
+                        <label for="7langProf1" >Elemantary profficiency</label> <br>
+                        
+                            <input type="radio" value="Limited working profficiency" name="7langProf" id="7langProf2">
+                                <label for="7langProf2" > Limited working profficiency </label><br>
+                           
+                                <input type="radio" value="Professional working profficiency" name="7langProf" id="7langProf3">
+                                    <label for="7langProf3" >Professional working profficiency </label>
+                                    <br>
+                                    <input type="radio" value="Full professional profficiency" name="7langProf" id="7langProf4">
+                                        <label for="7langProf4" >Full professional profficiency</label>
+                                        <br>
+                                        <input type="radio" value="Native or bilingual profficiency" name="7langProf" id="7langProf5">
+                                        <label for="7langProf5" >Native or bilingual profficiency</label>
+                            </div>
+    </div>
+        </label>
     </ul>
-    <button id="changes-btn">Click Here to Rewrite</button>
+
+</form>
+<div><button id="langBtn">Click here to select languages</button></div>
+    <hr>
+    <div class="information"><h4>Write about yourself</h4></div>
+    <div class="input"><textarea name="about" id="in-about"></textarea></div>
+        <div><p>example: I am a software engineer with experience in variety of pragramming languages and a track record of delievering high-quality code.I am skilled in problem-solving and have a strong background in computer science.I am a strong communicator and enjoy working with collaboratively with others.</p></div>
+    
+    <hr>
+
+    <div class="information"><h4>Tell us about your education:</h4></div>
+    <div class="input" ><textarea name="education" id="in-education"></textarea>
+    </div>
+    <div><p>example: Matriculation from Amma Foundaion School,Inter from XYZ college ,Bachelors from XYZ university,Masters from XYZ university.</p></div>
+    <hr>
+    <div class="information"><h4>Tell us about your experience:</h4></div>
+    <div class="input" ><textarea name="experience" id="in-experience" > </textarea></div>
+    <div><p>Example: 3 years of experience in _____ company working as a senoir web developer there.</p></div>
+    <hr>
+    <button id="Generate-button">Generate Your Resume</button>
+    <!-- output -->
+</form>
+<div class="final-resume " id="hide">
+<section class="section-left">
+   <div class="img-div"> <img class="user-img" src="/img/user.png" alt="userImage" id="outImage"></div>
+   <div class="name-out"><output id="out-name" class="output">Ali Gadit</output></div>
+   <div class="passion-out"><output id="out-passion" class="output">Web Developer</output></div>
+   <h1 class="content-head">Contact Details</h1>
+<div class="contact-items">
+   <div class="phone-font"><i class="fa-solid fa-square-phone "></i> <output class="output num-font" id="out-number">+923248274201</output></div>
+   <div class="envelope-font"><i class="fa-regular fa-envelope icon-pad"></i><output class="output email-font" id="out-email">someone@gmail.com</output></div>
 </div>
- </div>
+<div class="skills">
+     <h1 class="skills-head">Skills</h1>
+     <ul class="pos">
+        <!-- li-s1 means list item skill 1 -->
+        <li class="hide" id="li-s1"><output class="output" id="out-skill1">HTML</output></li>
+        <li class="hide" id="li-s2"><output class="output" id="out-skill2">CSS</output></li>
+        <li class="hide" id="li-s3"><output class="output" id="out-skill3">TS/jS</output></li>
+        <li class="hide" id="li-s4"><output class="output" id="out-skill4">NextJS</output></li>
+    </ul>
+</div>
+<div class="languages"> <h1 class="languages-head">Languages</h1>
+    <ul class="pos">
+        <!-- li-l1 means list item language1 -->
+        <li class="hide " id="li-l1"><output class="output" id="out-language1">English</output></li>
+        <li class="hide " id="li-l2"><output class="output" id="out-language2">Urdu</output></li>
+        <li class="hide " id="li-l3"><output class="output" id="out-language3">French</output></li>
+        <li class="hide " id="li-l4"><output class="output" id="out-language4">Spanish</output></li>
+        <li class="hide " id="li-l5"><output class="output" id="out-language5">Arabic</output></li>
+        <li class="hide " id="li-l6"><output class="output" id="out-language6">Russian</output></li>
+        <li class="hide " id="li-l7"><output class="output" id="out-language7">German</output></li>
+    </ul>
+</div>
+</section>
+<section class="section-right">
+    <div class="about-me"><h1>About Me</h1></div>
+    <div class="about-out"><output class="output" id="out-about">
+        I am a software engineer with experience in variety of pragramming languages and a track record of delievering high-quality code.I am skilled in problem-solving and have a strong background in computer science.I am a strong communicator and enjoy working with collaboratively with others.
+    </output></div>
+    <div class="education-me"><h1>Education</h1></div>
+        <div class="education-out"><output class="output" id="out-education">Matriculation from Amma Foundaion School,Inter from XYZ college ,Bachelors from XYZ university,Masters from XYZ university.</output></div>
+        <div class="experience-me"><h1>Experience</h1></div>
+        <div class="experience-out"><output class="output" id="out-experience"> I am a software engineer with experience in variety of pragramming languages and a track record of delievering high-quality code.I am skilled in problem-solving and have a strong background in computer science.I am a strong communicator and enjoy working with collaboratively with others.</output></div>
+</section>
+</div>
+<div class="btns hide" id="btnDiv">
+    <button id="changes-btn">Click here to rewrite</button>
+    <button id="pdfButton">Download Resume</button>
+
+</div>
     <script src="script.js" ></script>
 </body>
 </html>

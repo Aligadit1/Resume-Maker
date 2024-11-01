@@ -28,9 +28,6 @@
 #options :hover{
     cursor: pointer;
 }
-.hide{
-    display: none;
-}
 #Generate-button{
     cursor: pointer;
     display: block;
@@ -47,14 +44,6 @@
     height: 5vmin;
     border-radius: 10px;
     cursor: pointer;
-   
-}
-.output{
-   
-    font-size: 3vmin;
-    color: #8dc6ff;
-    text-decoration: underline;
-     
 }
 .information1{
     display: block;
@@ -72,7 +61,10 @@
     margin-left: auto;
     margin-right: auto;
 }
-#outputHide{
+.hide{
+    display: none;
+}
+#hide{
     display: none;
 }
 .main-resume{
@@ -98,4 +90,165 @@
     margin-left: auto;
     margin-right: auto;
 }
+#pdfButton{
+    color: #3e588f;
+    height: 5vmin;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vmin;
+    border: none;
 
+}
+.final-resume{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 200px;
+}
+.section-left{
+    width: 30%;
+    background: #272343;
+    justify-items: center;
+    color: white;
+    border-radius: 6px;
+}
+.section-right{
+    width: 70%;
+    color: black;
+    background: aliceblue;
+    border-radius: 6px;
+}
+.user-img{
+    border-radius: 50%;
+    height: 90%;
+    width: 100%;
+    margin-top: 20px;
+}
+.img-div{
+    height: 10vw;
+    width: 11vw;
+}
+#out-name{
+    font-size: 2vw;
+    font-weight: bold;
+    font-family:Helvetica, sans-serif
+}
+
+.name-out{
+    margin-top: 15px;
+}
+.passion-out{
+    font-size: 1.2vw ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 12px;
+}
+.content-head{
+    margin-top: 45px;
+    padding-right: 16.5vw;
+    font-size: 1.5vw;
+}
+.phone-font{
+    font-size: 1.2vw;
+    display: flex;
+}
+.num-font{
+    font-size: 1vw;
+    align-content: center;
+    padding-left: 1.5vw;
+}
+.envelope-font{
+    margin-top: 3px;
+    font-size: 1.1vw;
+    display: flex;
+}
+.email-font{
+    font-size: 1vw;
+    padding-left: 1.5vw;
+    align-content: center;
+}
+.contact-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 10vw;
+}
+.skills-head{
+    margin-top: 30px;
+    padding-right: 23vw;
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+.pos{
+    font-size: 1vw;
+}
+.languages-head{
+    margin-top: 30px;
+    padding-right: 20vw;
+    font-size: 1.5vw;
+    margin-bottom: 0;
+
+}
+.skills{
+    font-size: 1vw;
+}
+.languages{
+    font-size: 1vw;
+}
+i{
+    position: absolute;
+}
+.pos{
+    position: relative;
+}
+.about-me{
+    font-size: 1.3vw;
+    margin: 1.2vw;
+}
+.about-out{
+    width: 40vw;
+    margin: 1.2vw 8vw;
+    font-size: 1.3vw;
+}
+.education-me{
+    font-size: 1.3vw;
+    margin: 1.2vw;
+    margin-top: 9vw;
+}
+.education-out{
+    width: 40vw;
+    margin: 1.2vw 8vw;
+    font-size: 1.3vw;
+}
+.experience-me{
+    font-size: 1.3vw;
+    margin: 1.2vw;
+    margin-top: 9vw;
+}
+.experience-out{
+    font-size: 1.3vw;
+    width: 40vw;
+    margin: 0 8vw;
+}
+.btns{
+    margin-top: 25px;
+
+}
+#langBtn{
+    color: #3e588f;
+    height: 5vmin;
+    border-radius: 10px;
+    cursor: pointer;   
+}
+.font-lang{
+    font-size: 2vw;
+}
+.font-lang-prof{
+    font-size: 1.3vw;
+
+}
