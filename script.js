@@ -248,17 +248,39 @@ const userEducation = document.getElementById("out-education");
 const userExperience = document.getElementById("out-experience");
 // function to create resume
 function userResume() {
-    userName.textContent = Name.value;
-    userPassion.textContent = Passion.value;
-    userNumber.textContent = number.value;
-    userEmail.textContent = email.value;
-    userEducation.textContent = education.value;
-    userExperience.textContent = experience.value;
-    userAbout.textContent = about.value;
+    userName.textContent = Name.value || "Your Name Here";
+    userPassion.textContent = Passion.value || "Your Passion Here";
+    userNumber.textContent = number.value || "Your Number Here";
+    userEmail.textContent = email.value || "Your Email Here";
+    userEducation.textContent = education.value || "Your education Here";
+    userExperience.textContent = experience.value || "Your Experience Here";
+    userAbout.textContent = about.value || "Your About Here";
     resume();
     ImgSrcChange();
     displayLanguageValue();
     displayCheckboxValue();
 }
+//EditableFunctionality
+userName.addEventListener("click", () => {
+    userName.contentEditable = "true";
+});
+userPassion.addEventListener("click", () => {
+    userPassion.contentEditable = "true";
+});
+userNumber.addEventListener("click", () => {
+    userNumber.contentEditable = "true";
+});
+userEmail.addEventListener("click", () => {
+    userEmail.contentEditable = "true";
+});
+userEducation.addEventListener("click", () => {
+    userEducation.contentEditable = "true";
+});
+userExperience.addEventListener("click", () => {
+    userExperience.contentEditable = "true";
+});
+userAbout.addEventListener("click", () => {
+    userAbout.contentEditable = "true";
+});
 genBtn.addEventListener("click", userResume);
 changingBtn === null || changingBtn === void 0 ? void 0 : changingBtn.addEventListener("click", Rewrite);

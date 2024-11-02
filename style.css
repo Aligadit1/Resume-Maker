@@ -1,3 +1,6 @@
+body{
+    margin: 0 8px;
+}
 #main-heading{
     display: flex;
     justify-content: center;
@@ -128,6 +131,7 @@
     height: 90%;
     width: 100%;
     margin-top: 20px;
+    cursor: not-allowed;
 }
 .img-div{
     height: 10vw;
@@ -142,15 +146,24 @@
 .name-out{
     margin-top: 15px;
 }
+.name-out:hover{
+    color:aqua;
+    cursor: crosshair;
+}
 .passion-out{
     font-size: 1.2vw ;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 12px;
 }
+.passion-out:hover{
+    color:aqua;
+    cursor: crosshair;
+}
 .content-head{
     margin-top: 45px;
     padding-right: 16.5vw;
     font-size: 1.5vw;
+    cursor: not-allowed;
 }
 .phone-font{
     font-size: 1.2vw;
@@ -161,6 +174,10 @@
     align-content: center;
     padding-left: 1.5vw;
 }
+.num-font:hover{
+    color:aqua;
+    cursor: crosshair;
+}
 .envelope-font{
     margin-top: 3px;
     font-size: 1.1vw;
@@ -170,6 +187,10 @@
     font-size: 1vw;
     padding-left: 1.5vw;
     align-content: center;
+}
+.email-font:hover{
+    color:aqua;
+    cursor: crosshair;
 }
 .contact-items{
     display: flex;
@@ -183,6 +204,7 @@
     padding-right: 23vw;
     font-size: 1.5vw;
     margin-bottom: 0;
+    cursor: not-allowed;
 }
 .pos{
     font-size: 1vw;
@@ -192,6 +214,7 @@
     padding-right: 20vw;
     font-size: 1.5vw;
     margin-bottom: 0;
+    cursor: not-allowed;
 
 }
 .skills{
@@ -209,31 +232,46 @@ i{
 .about-me{
     font-size: 1.3vw;
     margin: 1.2vw;
+    cursor: not-allowed;
 }
 .about-out{
     width: 40vw;
     margin: 1.2vw 8vw;
     font-size: 1.3vw;
 }
+.about-out:hover{
+    color:aqua;
+    cursor: crosshair;
+}
 .education-me{
     font-size: 1.3vw;
     margin: 1.2vw;
     margin-top: 9vw;
+    cursor: not-allowed;
 }
 .education-out{
     width: 40vw;
     margin: 1.2vw 8vw;
     font-size: 1.3vw;
 }
+.education-out:hover{
+    color:aqua;
+    cursor: crosshair;
+}
 .experience-me{
     font-size: 1.3vw;
     margin: 1.2vw;
     margin-top: 9vw;
+    cursor: not-allowed;
 }
 .experience-out{
     font-size: 1.3vw;
     width: 40vw;
     margin: 0 8vw;
+}
+.experience-out:hover{
+    color:aqua;
+    cursor: crosshair;
 }
 .btns{
     margin-top: 25px;
@@ -251,4 +289,44 @@ i{
 .font-lang-prof{
     font-size: 1.3vw;
 
+}
+.footer{
+    width: 98vw;
+    height: 55px;
+    margin-top: 20px;
+    background-color:#272343;
+    margin-bottom: 0;
+    justify-items: center;
+}
+.footer-div{
+    height:25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line-break{
+    height: 1px;
+    width: 50%;
+    background: white;
+    margin: 3px 0;
+}
+.i-footer{
+    color: aqua;
+    font-size: 20px;
+}
+.icon-div{
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin: 0 8px;
+}
+.i-footer:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+.copyright{
+    color: aqua;
 }
