@@ -262,6 +262,7 @@ function userResume(): void {
   ImgSrcChange();
   displayLanguageValue()
   displayCheckboxValue()
+  trimName()
 }
 //EditableFunctionality
 userName.addEventListener("click",()=>{
@@ -285,5 +286,18 @@ userExperience.addEventListener("click",()=>{
 userAbout.addEventListener("click",()=>{
   userAbout.contentEditable="true"
 })
+// ShareAble and uniqueURL based on users name
+function generateShareableLink(name:string):string{
+  const baseURL = window.location.origin + window.location.pathname
+  const URL =`${baseURL}?${encodeURIComponent(name)}`;
+  return URL;
+}
+function trimName(){
+  const name=Name.value.trim()||"Your Name Here"
+  userName.textContent = name 
+  const ShareableLink=generateShareableLink(name)
+  alert(`Your Link: ${ShareableLink}`)
+}
 genBtn.addEventListener("click", userResume);
 changingBtn?.addEventListener("click", Rewrite);
+
