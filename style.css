@@ -1,28 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     margin: 0 8px;
+    background-color: #E2F1E7;
+}
+.mainContainer{
+    width: 50%;
+    justify-self: center;
+    border: 3px solid #272343;
+    border-top: 20px solid #272343;
+    border-left: 10px solid #272343;
+    border-radius: 8px;
+    padding: 20px 0;
+    background-color:#E5E1DA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.eachInfoContainer{
+    width: 80%;
+}
+.infoContainer{
+    width: 100%;
+    border: 2px solid #22313f;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 #main-heading{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     color: aqua;
     align-items: center;
     background: #272343;
-    height: 10vh
+    border-radius: 8px;
+    height: 10vh;
+    
+}
+.btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.example{
+    opacity: 0.7;
+    margin-top: 14px;
+    margin-left: 4px;
+    padding-bottom: 8px;
 }
 #user-information{
     font-size: 5vh;
     color: #272343;
+    justify-self: center;
+}
+.textarea{
+    border: none;
+    border-bottom: 2px solid #3e588f;
+    background:none;
+    width: 80%;
 }
 .information{
     color: #3e588f;
-    font-size: 4vh;
+    font-size: 26px;
+    margin-bottom: 14px;
     text-decoration: underline;
+    text-decoration-color: #272343 ;
+    margin-left: 10px;
+}
+
+.star{
+    content: '*';
+    color: red;
+    font-size: 22px;
+    display: inline-block;
+    text-decoration: none;
+    padding-left:3px;
+
 }
 .input-skill{
-    font-size: 4vmin;
-    margin-top: -2vh;
+    font-size: 18px;
+    margin-left: 25px;
     
     
+    
+}
+.inputDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.input{
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid #3e588f;
+    background: none;
+    margin-bottom: 8px;
 }
 .input :hover{
     transform: scale(1.1);
@@ -36,15 +112,15 @@ body{
     display: block;
     margin: 0 auto;
     color: darkslategrey;
-    height: 5vmin;
-    border-radius: 20px;
+    height: 35px;
+    border-radius: 10px;
     box-shadow: #272343;
     border-color: darkslategrey;
     margin-top: 5vmin;
 }
 #more-information{
     color: #3e588f;
-    height: 5vmin;
+    height: 35px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -86,7 +162,7 @@ body{
 }
 #changes-btn{
     color: #3e588f;
-    height: 5vmin;
+    height: 35px;
     border-radius: 10px;
     cursor: pointer;
     display: block;
@@ -95,7 +171,7 @@ body{
 }
 #pdfButton{
     color: #3e588f;
-    height: 5vmin;
+    height: 35px;
     border-radius: 10px;
     cursor: pointer;
     display: block;
@@ -277,11 +353,15 @@ i{
     margin-top: 25px;
 
 }
+.skillBtn{
+    margin:0 0 8px 2px ;   
+}
 #langBtn{
     color: #3e588f;
-    height: 5vmin;
+    height: 35px;
     border-radius: 10px;
-    cursor: pointer;   
+    cursor: pointer;
+    margin:8px 2px ;   
 }
 .font-lang{
     font-size: 2vw;

@@ -11,53 +11,68 @@
 <body>
     <form id="resume-form">
     <div id="form-body">
-    <div id="main-heading"><b><h1>Resume builder</h1></b></div>
+    <div id="main-heading">
+        <img src="./img/resume.png" alt="LOGO" height="60px" width="60px" ><b><h1 class="header">Resume builder</h1></b>
+    <img src="./img/free.png" alt="free" height="70px" width="70px"></div>
     <div id="user-information"><h3>Kindly provide your information</h3></div>
-    <div class="information"><h4>Your picture:</h4></div>
+    <div class="mainContainer">   
+    <div class="eachInfoContainer">
+    <div class="infoContainer">
+    <div class="information"><h4 >Picture<span class="star">*</span></h4></div>
     <label for="input-image">
-    <div class="input" ><input type="file" accept="image/jpeg, image/png, image/jpg" id="input-image"></div></label>
+    <div class="inputDiv"><input class="input" type="file" accept="image/jpeg, image/png, image/jpg" id="input-image" ></div></label>
+</div>
     <hr>
-    <div class="information"><h4>Your name:</h4></div>
-    <div class="input" ><input type="text" id="in-name" placeholder="Enter your name"></div>
+    <div class="infoContainer">
+    <div class="information"><h4>Name<span class="star">*</span></h4></div>
+    <div class="inputDiv" ><input class="input" type="text" id="in-name" placeholder="Enter your name" ></div>
     <div class="example"><p>Example:Ali Gadit</p></div>
+    </div>
     <hr>
-    <div class="information"><h4>Your Passion</h4></div>
-    <div class="input"><input type="text" id="in-passion" placeholder="What is your passion"></div>
+    <div class="infoContainer">
+    <div class="information"><h4>Passion<span class="star">*</span></h4></div>
+    <div class="inputDiv"><input class="input" type="text" id="in-passion" placeholder="What is your passion" ></div>
     <div class="example"><p>Example:Web Developer</p></div>
+    </div>
     <hr>
-    <div class="information"><h4>Your contact number:</h4></div>
-    <div class="input" ><input type="text" id="in-number" placeholder="Enter your Contact number" required></div>
+    <div class="infoContainer">
+    <div class="information"><h4>Contact number<span class="star">*</span></h4></div>
+    <div class="inputDiv" ><input class="input" type="text" id="in-number" placeholder="Enter your Contact number" ></div>
     <div class="example"><p>Example:+92 3248274201 Start with your country code not with 0</p></div>
+    </div>
     <hr>
-    <div class="information"><h4>Your Email:</h4></div>
-    <div class="input" ><input type="email" id="in-email" placeholder="Enter your Email"required ></div>
+    <div class="infoContainer">
+    <div class="information"><h4>Email<span class="star">*</span></h4></div>
+    <div class="inputDiv" ><input class="input" type="email" id="in-email" placeholder="Enter your Email" ></div>
     <div class="example"><p>Example:aligadit9192@gmail.com</p></div>
+    </div>
     <hr>
-    <div class="information" ><h4>Select your skills:</h4></div>
+    <div class="infoContainer">
+    <div class="information" ><h4>Select skills<span class="star">*</span></h4></div>
    <form>
     <ul>
     <div class="hide input-skill" id="options">
     <label for="in-skill1" >
-    <li><input type="checkbox" value="HTML" name="HTML" id="in-skill1">Html
-    </label></li>
-    <li><label for="in-skill2">
-    <input type="checkbox" value="CSS" name="CSS" id="in-skill2">CSS
-    </label></li>
-    <label for="in-skill3">
-    <li><input type="checkbox" value="TS/JS" name="TS/JS" id="in-skill3">TS/JS
-    </label></li>
-    <label for="in-skill4">
-    <li><input type="checkbox" value="NextJS" name="NextJS" id="in-skill4">NextJS
-    </li>
-</div>
+    <li><input type="checkbox" value="HTML" name="HTML" id="in-skill1">HTML</li>
     </label>
+    <label for="in-skill2">
+    <li><input type="checkbox" value="CSS" name="CSS" id="in-skill2">CSS</li>
+    </label>
+    <label for="in-skill3">
+    <li><input type="checkbox" value="TS/JS" name="TS/JS" id="in-skill3">TS/JS</li>
+    </label>
+    <label for="in-skill4">
+    <li><input type="checkbox" value="Next.js" name="NextJS" id="in-skill4">Next.js</li>
+</label>
+</div>
 </ul>
 </form>
-</div>
-    <br>
-    <div ><button id="more-information">Click here to select your skills</button></div>
+    <div class="btnContainer" ><button type="button" class="skillBtn" id="more-information">Click here to select skills</button></div>
+    </div>
+    
     <hr>
-    <div class="information"><h4>Select Your Languages</h4></div>
+    <div class="infoContainer">
+    <div class="information"><h4>Select languages<span class="star">*</span></h4></div>
     <form id="langForm" class="hide">
         <ul>
         <div class="input-skill" id="options">
@@ -210,24 +225,31 @@
     </ul>
 
 </form>
-<div><button id="langBtn">Click here to select languages</button></div>
+<div class="btnContainer"><button type="button" id="langBtn">Click here to select languages</button></div>
+</div>
     <hr>
-    <div class="information"><h4>Write about yourself</h4></div>
-    <div class="input"><textarea name="about" id="in-about"></textarea></div>
-        <div><p>example: I am a software engineer with experience in variety of pragramming languages and a track record of delievering high-quality code.I am skilled in problem-solving and have a strong background in computer science.I am a strong communicator and enjoy working with collaboratively with others.</p></div>
-    
-    <hr>
-
-    <div class="information"><h4>Tell us about your education:</h4></div>
-    <div class="input" ><textarea name="education" id="in-education"></textarea>
+    <div class="infoContainer">
+    <div class="information"><h4>Write about yourself<span class="star">*</span></h4></div>
+    <div class="inputDiv"><textarea class="input" rows="8" cols="50" name="about" id="in-about"></textarea></div>
+        <div class="example"><p>example: I am a software engineer with experience in variety of pragramming languages and a track record of delievering high-quality code.I am skilled in problem-solving and have a strong background in computer science.I am a strong communicator and enjoy working with collaboratively with others.</p></div>
     </div>
-    <div><p>example: Matriculation from Amma Foundaion School,Inter from XYZ college ,Bachelors from XYZ university,Masters from XYZ university.</p></div>
     <hr>
-    <div class="information"><h4>Tell us about your experience:</h4></div>
-    <div class="input" ><textarea name="experience" id="in-experience" ></textarea></div>
-    <div><p>Example: 3 years of experience in _____ company working as a senoir web developer there.</p></div>
+    <div class="infoContainer">
+    <div class="information"><h4>Write about your education<span class="star">*</span></h4></div>
+    <div class="inputDiv" ><textarea class="input" rows="8" cols="50" name="education" id="in-education"></textarea>
+    </div>
+    <div class="example"><p>example: Matriculation from Amma Foundaion School,Inter from XYZ college ,Bachelors from XYZ university,Masters from XYZ university.</p></div>
+    </div>
     <hr>
-    <button id="Generate-button">Generate Your Resume</button>
+    <div class="infoContainer">
+    <div class="information"><h4>Write about your experience<span class="star">*</span></h4></div>
+    <div class="inputDiv" ><textarea class="input" rows="8" cols="50" name="experience" id="in-experience" ></textarea></div>
+    <div class="example"><p>Example: 3 years of experience in _____ company working as a senoir web developer there.</p></div>
+    </div>
+    <hr>
+    <button type="button" id="Generate-button">Generate Your Resume</button>
+    </div>
+    </div>
     <!-- output -->
 </form>
 <div class="final-resume " id="hide">
@@ -275,8 +297,8 @@
 </section>
 </div>
 <div class="btns hide" id="btnDiv">
-    <button id="changes-btn">Click here to rewrite</button>
-    <button id="pdfButton">Download Resume</button>
+    <button type="button" id="changes-btn">Click here to rewrite</button>
+    <button type="button" id="pdfButton">Download Resume</button>
 
 </div>
 <footer class="footer">
